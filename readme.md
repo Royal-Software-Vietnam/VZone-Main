@@ -1,0 +1,23 @@
+# Virtual Zone Document
+
+* Các biến môi trường bao gồm:
+```
+    DATABASE = .................................................................
+    TOKEN_SECRET = .............................................................
+    BASE_URL = .................................................................
+    GOOGLE_CLOUD_CLIENT = ......................................................
+    GOOGLE_CLOUD_SECRET = ......................................................
+    MAIN_EMAIL = ...............................................................
+    GOOGLE_CLOUD_REFRESH = .....................................................
+```
+
+1. Luồng đăng ký:
+
+    1.1 - Người dùng gửi thông tin dăng ký, bao gồm name, username, email, password
+
+    1.2 - Server trả về lỗi khi email không hợp lệ (đã tồn tại, không đúng định dạng)
+
+    1.3 - Thực hiện tạo user đồng thời gửi về email của người dùng OTP sử dụng để xác thực
+
+    1.4 - Gửi về cho người dùng 1 user object, kết thúc
+
